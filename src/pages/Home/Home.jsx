@@ -60,6 +60,7 @@ function Home() {
           <div className="btn-quote-learn" data-aos="fade-up" data-aos-delay="400">          
             <a href="/product" className="btn-quote">Start Learning</a>
             <a href="/pricing" className="btn-learn">View Courses</a>
+
           </div>
         </div>
         <div className="home-card-content">
