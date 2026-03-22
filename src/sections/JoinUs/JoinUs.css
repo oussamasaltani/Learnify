@@ -1,0 +1,158 @@
+.join-us-container {
+  background-color: var(--dark-blue);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.join-us-container span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.join-us-container h2 {
+  color: white;
+  font-size: 35px;
+}
+
+.join-us-container p {
+  color: white;
+  width: 650px;
+  text-align: center;
+}
+
+.join-us-container .email-subscribe .email {
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 350px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.join-us-container .email-subscribe .btn-subscribe {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--red);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.join-us-container .email-subscribe .email:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.join-us-container .email-subscribe .email:focus {
+  box-shadow: 0 0 0 3px var(--red);
+  transform: scale(1.02);
+}
+
+.join-us-container .email-subscribe .btn-subscribe:hover {
+  background-color: #c13b3b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(193, 59, 59, 0.3);
+}
+
+.join-us-container .email-subscribe .btn-subscribe:active {
+  transform: translateY(0);
+}
+
+/* Ripple effect for button */
+.join-us-container .email-subscribe .btn-subscribe::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.join-us-container .email-subscribe .btn-subscribe:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Tablet Styles (481px - 949px) */
+@media screen and (min-width: 481px) and (max-width: 949px) {
+  .join-us-container {
+    padding: 40px 30px;
+  }
+
+  .join-us-container h2 {
+    font-size: 28px;
+  }
+
+  .join-us-container p {
+    width: 100%;
+    max-width: 550px;
+    font-size: 15px;
+  }
+
+  .join-us-container .email-subscribe .email {
+    width: 300px;
+  }
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .join-us-container {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .join-us-container span {
+    font-size: 12px;
+  }
+
+  .join-us-container h2 {
+    font-size: 24px;
+  }
+
+  .join-us-container p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .join-us-container .email-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .join-us-container .email-subscribe .email {
+    width: 100%;
+    margin-right: 0;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .join-us-container .email-subscribe .btn-subscribe {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .join-us-container .email-subscribe .btn-subscribe:hover {
+    transform: translateY(-1px);
+  }
+
+  .join-us-container .email-subscribe .email:hover {
+    transform: scale(1.01);
+  }
+}

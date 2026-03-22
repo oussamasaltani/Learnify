@@ -1,0 +1,219 @@
+.home-container {
+  background-color: var(--dark-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container .home-header-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.home-container .home-header-content span {
+  margin-top: 80px;
+  background-color: var(--red);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.home-container .home-header-content h1 {
+  color: white;
+  font-size: 48px;
+}
+
+.home-container .home-header-content p {
+  color: var(--light-gray);
+}
+
+.home-container .home-header-content .btn-quote-learn a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-container .home-header-content .btn-quote-learn .btn-quote {
+  background-color: var(--red);
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container .home-header-content .btn-quote-learn .btn-quote:hover {
+  background-color: #c13b3b;
+}
+
+.home-container .home-header-content .btn-quote-learn .btn-learn {
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container .home-header-content .btn-quote-learn .btn-learn:hover {
+  background-color: white;
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.home-card-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 30px;
+  margin: 25px 0 10px 0;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  flex: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home-card h3 {
+  color: var(--dark-blue);
+}
+
+.home-card p {
+  color: var(--light-gray);
+}
+
+.home-card .red-line {
+  width: 100px;
+  height: 2px;
+  background-color: var(--red);
+  transition: width 0.3s ease-in-out;
+}
+
+.home-card:hover .red-line {
+  width: 200px;
+}
+
+/* Tablet Styles (481px - 949px) */
+@media screen and (min-width: 481px) and (max-width: 949px) {
+  .home-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .home-container .home-header-content {
+    padding: 0 40px;
+  }
+
+  .home-container .home-header-content h1 {
+    font-size: 36px;
+  }
+
+  .home-container .home-header-content p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .home-card-content {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 40px 0 40px;
+    justify-content: center;
+  }
+
+  .home-card {
+    flex: 0 1 calc(50% - 20px);
+    min-width: 280px;
+    max-width: 350px;
+  }
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .home-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+
+  .home-container .home-header-content {
+    padding: 0 20px;
+  }
+
+  .home-container .home-header-content span {
+    margin-top: 60px;
+    font-size: 12px;
+  }
+
+  .home-container .home-header-content h1 {
+    font-size: 28px;
+  }
+
+  .home-container .home-header-content p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .home-container .home-header-content .btn-quote-learn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .home-container .home-header-content .btn-quote-learn .btn-quote,
+  .home-container .home-header-content .btn-quote-learn .btn-learn {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .home-card-content {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .home-card {
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .home-card h3 {
+    font-size: 18px;
+  }
+
+  .home-card p {
+    font-size: 14px;
+  }
+
+  .red-line {
+    width: 60px;
+  }
+}

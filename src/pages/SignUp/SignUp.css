@@ -1,0 +1,329 @@
+.join-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--dark-blue) 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.join-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, var(--red) 0%, transparent 40%),
+              radial-gradient(circle at 70% 70%, rgba(178, 227, 255, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.join-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+}
+
+.join-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(25px);
+  border-radius: 24px;
+  padding: 48px 36px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 45px;
+}
+
+.join-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(231, 64, 64, 0.2);
+}
+
+.dark-mode .join-card {
+  background: rgba(45, 45, 45, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+}
+
+.join-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.join-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--red) 0%, #c13b3b 50%, var(--dark-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.dark-mode .join-header h1 {
+  background: linear-gradient(135deg, var(--red) 0%, #ff6b6b 50%, var(--dark-text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.join-header p {
+  color: #666;
+  font-size: 1.05rem;
+  font-weight: 400;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.dark-mode .join-header p {
+  color: var(--dark-text-secondary);
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
+.dark-mode .form-group label {
+  color: var(--dark-text);
+}
+
+.form-group label svg {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 18px 22px 18px 54px;
+  border: 2px solid #e1e5e9;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(231, 64, 64, 0.15);
+  transform: translateY(-2px);
+}
+
+.dark-mode .form-group input {
+  background: rgba(60, 60, 60, 0.85);
+  border-color: var(--dark-border);
+  color: var(--dark-text);
+}
+
+.dark-mode .form-group input::placeholder {
+  color: var(--dark-text-secondary);
+}
+
+.form-group.error input {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
+
+.field-error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border-left: 4px solid #ef4444;
+  font-size: 0.92rem;
+  animation: slideInUp 0.4s ease;
+}
+
+.dark-mode .error-message {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border-left-color: #ef4444;
+}
+
+.join-btn {
+  background: linear-gradient(135deg, var(--red) 0%, #ff5252 50%, #c13b3b 100%);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(231, 64, 64, 0.3);
+  min-height: 66px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.join-btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(231, 64, 64, 0.45);
+}
+
+.join-btn:active:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.join-btn:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.join-btn:hover::before {
+  left: 100%;
+}
+
+.loading-spinner-small {
+  width: 22px;
+  height: 22px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.join-footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.dark-mode .join-footer {
+  border-top-color: var(--dark-border);
+}
+
+.join-footer p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.dark-mode .join-footer p {
+  color: var(--dark-text-secondary);
+}
+
+.link-login {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.link-login::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0%;
+  background: var(--red);
+  transition: all 0.5s ease;
+}
+
+.link-login:hover::after {
+  width: 100%;
+}
+
+.link-login:hover {
+  transform: translateX(6px);
+}
+
+@media (max-width: 480px) {
+  .join-page {
+    padding: 15px;
+  }
+
+  .join-card {
+    padding: 36px 28px;
+    border-radius: 20px;
+  }
+
+  .join-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .form-group input {
+    padding: 16px 20px 16px 50px;
+  }
+
+  .join-btn {
+    padding: 18px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .join-card {
+    padding: 32px 24px;
+    margin: 0 10px;
+  }
+}

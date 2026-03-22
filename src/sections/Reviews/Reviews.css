@@ -1,0 +1,165 @@
+.reviews-container {
+  padding: 50px 50px 10px 50px;
+}
+
+.reviews-header-content {
+  text-align: center;
+}
+
+.reviews-header-content span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.reviews-header-content h2 {
+  color: var(--dark-blue);
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.reviews-header-content p {
+  color: var(--light-gray);
+}
+
+.review-card-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.review-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.review-card-content .review-card .review-card-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.review-card-content .review-card .review-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-card-content .review-card .review-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.review-card .review-details h3 {
+  color: var(--red);
+}
+
+.review-card .review-details span {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.review-card .review-details p {
+  color: var(--light-gray);
+}
+
+/* Hover Effects */
+.review-card-content .review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.review-card-content .review-card:hover .review-card-image img {
+  transform: scale(1.05);
+}
+
+
+/* Tablet Styles (481px - 949px) */
+@media screen and (min-width: 481px) and (max-width: 949px) {
+  .reviews-container {
+    padding: 40px 30px;
+  }
+
+  .reviews-header-content h2 {
+    font-size: 28px;
+  }
+
+  .review-card-content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .review-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .review-card-content .review-card .review-card-image {
+    height: 500px;
+  }
+
+  .review-card-content .review-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .reviews-container {
+    padding: 30px 20px;
+  }
+
+  .reviews-header-content span {
+    font-size: 12px;
+  }
+
+  .reviews-header-content h2 {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+
+  .reviews-header-content p {
+    font-size: 14px;
+  }
+
+  .review-card-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .review-card {
+    width: 100%;
+  }
+
+  .review-card-content .review-card .review-card-image {
+    height: 220px;
+  }
+
+  .review-details {
+    padding: 15px;
+  }
+
+  .review-details h3 {
+    font-size: 18px;
+  }
+
+  .review-details span {
+    font-size: 14px;
+  }
+
+  .review-details p {
+    font-size: 13px;
+  }
+
+  .review-card-content .review-card:hover {
+    transform: translateY(-3px);
+  }
+}
