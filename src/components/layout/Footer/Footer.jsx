@@ -63,7 +63,7 @@ function Footer() {
 
       <div className="copyright">
         <p>&copy; {currentYear} Learnify. All rights reserved.</p>
-        <p>Developed by <a href="#" target="_blank" rel="noopener noreferrer">OUSSAMA SALTANI</a></p>
+        <p>Developed by <a href="/home" target="_blank" rel="noopener noreferrer">OUSSAMA SALTANI</a></p>
       </div>
     </div>
   );
